@@ -12,6 +12,7 @@
 		1F46E69620EBC61800869A5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F46E69420EBC61800869A5D /* Main.storyboard */; };
 		1F46E69820EBC61900869A5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F46E69720EBC61900869A5D /* Assets.xcassets */; };
 		1F46E69B20EBC61900869A5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F46E69920EBC61900869A5D /* LaunchScreen.storyboard */; };
+		A42FA69520ED291F00EF77A6 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42FA69420ED291F00EF77A6 /* AuthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		1F46E69720EBC61900869A5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F46E69A20EBC61900869A5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F46E69C20EBC61900869A5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A42FA69420ED291F00EF77A6 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				1F46E69020EBC61800869A5D /* AppDelegate.swift */,
 				1F46E69220EBC61800869A5D /* ViewController.swift */,
+				A42FA69420ED291F00EF77A6 /* AuthViewController.swift */,
 				1F46E69420EBC61800869A5D /* Main.storyboard */,
 				1F46E69720EBC61900869A5D /* Assets.xcassets */,
 				1F46E69920EBC61900869A5D /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F46E69320EBC61800869A5D /* ViewController.swift in Sources */,
+				A42FA69520ED291F00EF77A6 /* AuthViewController.swift in Sources */,
 				1F46E69120EBC61800869A5D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

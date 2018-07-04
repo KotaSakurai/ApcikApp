@@ -1,43 +1,46 @@
 //
-//  ViewController.swift
+//  AuthViewController.swift
 //  Apick
 //
-//  Created by 桜井広大 on 2018/07/03.
+//  Created by kazuma on 2018/07/05.
 //  Copyright © 2018年 KotaSakurai. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class AuthViewController: UIViewController {
     
+    @IBOutlet weak var textField: UITextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBOutlet weak var textField: UITextField!
+    
 
     @IBAction func tapButton(_ sender: Any) {
-    
-        let url = NSURL(string: "http://192.168.0.3:3000/api/v1/users")!
+        
+        let url = NSURL(string: "http://192.168.0.3:3000/api/v1/phone_auth")!
         let request = NSMutableURLRequest(url: url as URL)
-        let delegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         
         request.httpMethod = "POST"
         
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
+        let delegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        
         let params: [String: AnyObject] = [
-            "user": [
-                "phone": textField.text!,
-                "device_id": "1"
+            "phone_auth": [
+                "token": textField.text!,
+                "phone": delegate.phone
                 ] as AnyObject
         ]
-        
-        delegate.phone = textField.text!
         
         do {
             request.httpBody = try JSONSerialization.data(withJSONObject: params)
@@ -53,5 +56,5 @@ class ViewController: UIViewController {
             return
         }
     }
-}
 
+}
