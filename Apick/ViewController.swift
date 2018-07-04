@@ -21,14 +21,15 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBOutlet weak var textField: UITextField!
+
     @IBAction func tapButton(_ sender: Any) {
     
-        let url = NSURL(string: "http://192.168.1.2:3000/api/v1/users")!
+        let url = NSURL(string: "http://192.168.0.3:3000/api/v1/users")!
         let request = NSMutableURLRequest(url: url as URL)
         
         request.httpMethod = "POST"
         
-        //        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
         let params: [String: AnyObject] = [
             "user": [
@@ -47,16 +48,9 @@ class ViewController: UIViewController {
                 }
             })
             task.resume()
-            //        close(<#Int32#>)
         } catch {
             return
         }
-    }
-    
-    
-    
-    func aaa() {
-        
     }
 }
 
