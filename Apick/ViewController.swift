@@ -22,7 +22,7 @@ class ViewController: UIViewController {
 
     @IBAction func tapButton(_ sender: Any) {
     
-        let url = NSURL(string: "http://192.168.0.3:3000/api/v1/users")!
+        let url = NSURL(string: "http://192.168.1.2:3000/api/v1/users")!
         let request = NSMutableURLRequest(url: url as URL)
         let delegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         
